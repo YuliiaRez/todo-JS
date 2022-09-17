@@ -9,6 +9,9 @@
     <title>TODO</title>
   </head>
   <body>
+    <script>
+      import InlineSVG from "./isArchived.svg";
+    </script>
     <main>
       <table>
         <colgroup>
@@ -18,9 +21,9 @@
           <col class="category1" />
           <col class="content" />
           <col class="dates" />
-          <col class="active-icon" />
-          <col class="active-icon" />
-          <col class="active-icon" />
+          <col class="icons" />
+          <col class="icons" />
+          <col class="icons" />
         </colgroup>
         <thead>
           <tr>
@@ -30,19 +33,18 @@
             <th>Category</th>
             <th>Content</th>
             <th>Dates</th>
-            <th class="header-icon">&nbsp;</th>
+            <th>&nbsp;</th>
             <th class="header-icon archive" id="table-switcher"></th>
+
             <th class="header-icon delete"></th>
           </tr>
         </thead>
-        <tbody id="active-archive-table"></tbody>
+        <tbody id="archive-table"></tbody>
       </table>
 
-      <div id="create-note">
+      <div id="create-task">
         <div id="announcer"></div>
-        <button style="border: 1px solid cadetblue" id="create-note-button">
-          Create Note
-        </button>
+        <button id="create-task-button">Create Note</button>
       </div>
 
       <table>
@@ -55,7 +57,7 @@
         <thead>
           <tr>
             <th>&nbsp;</th>
-            <th>Note Category</th>
+            <th>Task Category</th>
             <th>Active</th>
             <th>Archived</th>
           </tr>

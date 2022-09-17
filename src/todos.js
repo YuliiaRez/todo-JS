@@ -1,4 +1,13 @@
-export let notes = [
+import * as ICONS from "./icons.js";
+export let icons = ICONS;
+
+export let categories = {
+  Idea: icons.ideaIcon,
+  Task: icons.taskIcon,
+  "Random Thought": icons.thoughtIcon,
+};
+
+export let tasks = [
   {
     id: "task1",
     name: "Shopping list",
@@ -22,18 +31,18 @@ export let notes = [
     name: "New Feature",
     created: new Date(2021, 3, 27),
     category: "Idea",
-    content:
-      "The term for task is from 3/5/2021 to 5/5/2021. Implement some feature in this ap",
-    dates: "3/5/2021, 5/5/2021",
+    content: "Implement some feature in this ap",
+    dates: "",
     archived: false,
   },
   {
     id: "task4",
-    name: "Meeting",
+    name: "Dentist",
     created: new Date(2021, 4, 5),
     category: "Task",
-    content: "Team meeting",
-    dates: "",
+    content:
+      "Im gonna have a dentist appointment on the 3/5/2021, I moved it from 5/5/2021",
+    dates: "3/5/2021, 5/5/2021",
     archived: false,
   },
   {
@@ -59,7 +68,7 @@ export let notes = [
     name: "Book",
     created: new Date(2021, 4, 20),
     category: "Task",
-    content: "Return to library",
+    content: "The Lean Statrup",
     dates: "",
     archived: true,
   },
