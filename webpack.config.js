@@ -5,11 +5,11 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   entry: "./src/app.js",
   output: {
-    filename: "bundle[chunkhash].js",
+    filename: "bundle.[chunkhash].js",
     path: path.resolve(__dirname, "public"),
   },
   devServer: {
-    port: 3000,
+    port: 3001,
   },
   plugins: [
     new HTMLPlugin({
@@ -17,4 +17,16 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.svg$/,
+        use: ["file-loader"],
+      },
+    ],
+  },
 };

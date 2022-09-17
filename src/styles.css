@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+* {
+  color: #424242;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 1em 4em;
+}
+.category-icon,
+.active-icon {
+  width: 4em;
+}
+.category-icon,
+.row-icon {
+  fill: #585454;
+}
+/*notes table*/
+.created,
+.category1 {
+  width: 8em;
+}
+
+@media screen and (max-width: 800px) {
+  .created,
+  .dates {
+    width: 0;
+  }
+}
+.header-icon {
+  fill: white;
+}
+/*stats table*/
+.active,
+.archived {
+  width: 20%;
+}
+svg {
+  max-height: 2em;
+  max-width: 2em;
+}
+table {
+  border-spacing: 0 0.5em;
+  width: 100%;
+  table-layout: fixed;
+}
+tr th {
+  color: white;
+  background-color: #999f;
+}
+tr td {
+  background-color: #bbb0bb48;
+}
+tr td:first-child,
+tr th:first-child {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+tr td:last-child,
+tr th:last-child {
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+td,
+th {
+  padding: 1em;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 2em;
+}
